@@ -12,6 +12,6 @@ int main(void)
 	{
 		putchar(n + '0');
 	}
-	putcha('\n');
+	putchar('\n');
 	return (0);
 }
