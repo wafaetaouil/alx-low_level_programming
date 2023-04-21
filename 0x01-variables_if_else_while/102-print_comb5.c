@@ -1,5 +1,6 @@
 #include <stdio.h>
-
+#include <stdlib.h>
+#include <time.h>
 /**
  * main - Entry point
  *
@@ -8,26 +9,21 @@
 
 int main(void)
 {
-	int n;
-	int i = 0;
+	int p, q;
 
-	for (n = 0 ; n < 100 ; n++)
+	for (p = 0 ; p <= 98; p++)
 	{
-		putchar(n / 10 + '0');
-		putchar(i + '0');
-		if (n < 99)
+		for (q = p + 1 ; q <= 99 ; q++)
 		{
-			putchar(',');
-			putchar(32);
-		}
-		i++;
-		if (i > 9)
-		{
-			i = 0;
+		putchar((p / 10) + '0');
+		putchar((p % 10) + '0');
+		putchar(' ');
+		if (p ==  98 && q == 99)
+		continue;
+		putchar(',');
+		putchar(' ');
 		}
 	}
 	putchar('\n');
 	return (0);
 }
-
-
