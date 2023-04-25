@@ -6,45 +6,42 @@
  * Return: Always 0.
  */
 int main(void)
+{
+	int c;
+	unsigned long n1 = 0, n2 = 1, n3;
+	unsigned long n1_h1, n1_h2, n2_h1, n2_h2;
+	unsigned long h1, h2;
+
+	for (c = 0; c < 92; c++)
 	{
-		int c;
-		unsigned long f1 = 0, f2 = 1, s;
-		unsigned long f1_half1, f1_half2, f2_half1, f2_half2;
-		unsigned long half1, half2;
-
-		for (c = 0; c < 92; c++)
-		{
-			s = f1 + f2;
-			printf("%lu, ", s);
-
-			f1 = f2;
-			f2 = s;
-		}
-
-		f1_half1 = f1 / 10000000000;
-		f2_half1 = f2 / 10000000000;
-		f1_half2 = f1 % 10000000000;
-		f2_half2 = f2 % 10000000000;
-
-		for (c = 93; c < 99; c)
-		{
-			half1 = f1_half1 + f2_half1;
-			half2 = f1_half2 + f2_half2;
-			if (f1_half2 + f2_half2 > 9999999999)
-			{
-				half1 += 1;
-				half2 %= 10000000000;
-			}
-
-			printf("%lu%lu", half1, half2);
-			if (c != 98)
-				printf(", ");
-
-			f1_half1 = f2_half1;
-			f1_half2 = f2_half2;
-			f2_half1 = half1;
-			f2_half2 = half2;
-		}
-		printf("\n");
-		return (0);
+		n3 = n1 + n2;
+		printf("%lu, ", n3);
+		n1 = n2;
+		n2 = n3;
 	}
+	n1_h1 = n1 / 10000000000;
+	n2_h1 = n2 / 10000000000;
+	n1_h2 = n1 % 10000000000;
+	n2_h2 = n2 % 10000000000;
+	for (c = 93; c < 99; c++)
+	{
+		h1 = n1_h1 + n2_h1;
+		h2 = n1_h2 + n2_h2;
+		if ((n1_h2 + n2_h2) > 9999999999)
+		{
+			h1 += 1;
+			h2 %= 10000000000;
+		}
+		printf("%lu%lu", h1, h2);
+		if (c != 98)
+			printf(", ");
+
+
+		n1_h1 = n2_h1;
+		n1_h2 = n2_h2;
+		n2_h1 = h1;
+		n2_h2 = h2;
+	}
+	printf("\n");
+	return (0);
+}
