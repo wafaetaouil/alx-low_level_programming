@@ -13,11 +13,11 @@ int main(void)
 		{
 			if (x % 3 == 0)
 			{
-				printf("fizz");
+				printf("Fizz");
 			}
 			if (x % 5 == 0)
 			{
-				printf("buzz");
+				printf("Buzz");
 			}
 		}
 		else
@@ -26,7 +26,7 @@ int main(void)
 		}
 		if (x != 100)
 		{
-			putchar(' ');
+		putchar(' ');
 		}
 	}
 	putchar('\n');
