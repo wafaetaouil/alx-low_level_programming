@@ -1,6 +1,6 @@
 #include "main.h"
 
-int a_sqrt_recursion(int n, int i)
+int a_sqrt_recursion(int n, int i);
 
 /**
 * _sqrt_recursion - returns the natural squar root of number
@@ -12,7 +12,7 @@ int _sqrt_recursion(int n)
 {
 	if (n < 0)
 		return (-1);
-	return (a_int _sqrt_recursion(n, 0));
+	return (a_sqrt_recursion(n, 0));
 }
 
 /**
