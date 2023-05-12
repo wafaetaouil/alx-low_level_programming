@@ -14,13 +14,14 @@ int main(int c, char *v[])
 
 	if (c == 3)
 	{
-		r1 = atoi(v[1]);
-		r2 = atoi(v[2]);
+		r1 = _atoi(v[1]);
+		r2 = _atoi(v[2]);
 		printf("%d\n", r1 * r2);
 	}
 	else
 	{
-		print("ERROR\n");
+		printf("ERROR\n");
 		return (1);
 	}
+	return (0);
 }
