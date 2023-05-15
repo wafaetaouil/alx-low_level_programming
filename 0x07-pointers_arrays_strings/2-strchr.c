@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _strchr - entre point
+ * _strchr- entrer point
  * @c: input
  * @s: input
  *
