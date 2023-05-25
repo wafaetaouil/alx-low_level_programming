@@ -5,7 +5,6 @@
 /**
  * print_all - print anything
  * @format: list of types
- * @...: variable
  */
 void print_all(const char * const format, ...)
 {
@@ -41,7 +40,7 @@ void print_all(const char * const format, ...)
 					i++;
 					continue;
 			}
-			p = ",";
+			p = ", ";
 			i++;
 		}
 	}
